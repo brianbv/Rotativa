@@ -18,6 +18,7 @@ namespace Rotativa
         {
             this.WkhtmlPath = string.Empty;
             this.FormsAuthenticationCookieName = ".ASPXAUTH";
+            this.PageSize = "Letter";
         }
 
         /// <summary>
@@ -86,6 +87,10 @@ namespace Rotativa
         /// </summary>
         [OptionFlag("--username")]
         public string UserName { get; set; }
+
+        [OptionFlag("--page-size")]
+        //A4,Letter, Etc
+        public string PageSize { get; set; }
 
         /// <summary>
         /// HTTP Authentication password.
